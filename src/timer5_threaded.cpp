@@ -31,9 +31,11 @@ int main() {
   std::thread t1{ &boost::asio::io_context::run, &io_context };
   std::thread t2{ &boost::asio::io_context::run, &io_context };
 
+  std::cout << "threads start" << std::endl;
   // Wait for the 2 loops to end.
   t1.join();
+  std::cout << "thread print" << std::endl;
   t2.join();
-
+  std::cout << "threads end" << std::endl;
   return 0;
 }
