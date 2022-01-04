@@ -29,6 +29,7 @@ set(TARGETS
     echo_client_sync
     echo_client_async
     my_timer
+    my_server
     )
 
 if(ENABLE_SSL)
